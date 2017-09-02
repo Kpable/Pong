@@ -29,13 +29,13 @@ public class PongTitleScreenController : MonoBehaviour {
         twoPlayer.SetActive(true);
         playButton.SetActive(false);
 
-        if (Application.isWebPlayer || Application.isEditor)
-        {
-            pcInstructions.SetActive(true);
-        }
-        else if(Application.isMobilePlatform)
+        if(Application.isMobilePlatform)
         {
             mobileInstructions.SetActive(true);
+        }
+        else
+        {
+            pcInstructions.SetActive(true);
         }
     }
 

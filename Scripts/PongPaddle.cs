@@ -25,7 +25,8 @@ public class PongPaddle : MonoBehaviour {
             //float y = Mathf.Clamp(Camera.main.ScreenToWorldPoint(Input.mousePosition).y, -5.5f, 5.5f);
             //transform.position = new Vector3(transform.position.x, y, 0);
             Vector3 pos = transform.position;
-            if (Application.isWebPlayer || Application.isEditor)
+            //if (Application.isWebPlayer || Application.isEditor)
+            if (!Application.isMobilePlatform)
             {
                 if (Input.GetKey(KeyCode.W) && name.Contains("1"))
                 {
